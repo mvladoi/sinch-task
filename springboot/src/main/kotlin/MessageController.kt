@@ -50,7 +50,7 @@ class MessageController {
 
          //this is just for safety, curl does not allow empty files
          try {
-             
+
         // init variables 
         val arr: List<Int> = input.map { it.toInt() }.toList()
         val sum : Int = arr.first()
@@ -72,7 +72,6 @@ class MessageController {
             //no pair found, save the entry in hash for later
             else{
                 hash.put(arr.elementAt(i), 1);
-                print("no pair")
             }
         }
       
@@ -90,7 +89,7 @@ class MessageController {
     @RequestMapping(value = ["/sinch-assignment/polish-notation"], method = [RequestMethod.POST])
     fun polish(@RequestBody data: String): String {
         
-               //split the input string by new lines, and raise an exception if empty file
+        //split the input string by new lines, and raise an exception if empty file
         var input: List<String>
 
 
@@ -102,10 +101,10 @@ class MessageController {
         }
         
        
-        //check if the input has the wright format
-        if (input.size < 3){
-            return "The input file requires at least 3 entries!"
-        }
+        for (item in input) {
+             print (item)
+              
+        }    
 
 
         //return number of pairs 
@@ -121,3 +120,78 @@ class MessageController {
 
 
 
+
+
+
+
+
+import java.util.Stack
+import java.util.Vector
+
+
+fun isOperand (x: String): Boolean {
+    if (x.equals("+") or x.equals("-") or x.equals("*") or x.equals("/") ){ 
+       return false
+    }    
+    else {
+       return true 
+    }
+            
+} 
+
+fun main(args: Array<String>){
+    //print(isOperand(x))
+    
+    
+    val input : List<String> = listOf("+ + 0.5 1.5 * 4 10", "- 2e3 - 700 + 7 * 2 15", "- -1.5 * 3.1415 / -7 -2", "100500", "1 2", "+ 1")
+    val res: Vector<String> = Vector<String>();
+    
+    for (item in input){
+   
+        var stack : Stack<Double> = Stack()
+        //val test: String = input[0]
+        //print (test)
+        val expr = input[0].split(" ")
+        //print (expr.toString())
+        
+        for (i in (expr.size -1) downTo 0){
+             if (isOperand(expr[i])){
+                 stack.add(expr[i].toDouble())
+             }
+             
+              else {
+ 
+             
+                val op1: Double = stack.peek()
+                stack.pop()
+                val op2: Double = stack.peek()
+                stack.pop()
+                
+                when (expr[i]) {
+                    
+                   "+" -> stack.push(op1 + op2)
+                   "-" -> stack.push(op1 - op2)
+                   "*" -> stack.push(op1 * op2)
+                   "/" -> stack.push(op1 / op2)
+                   
+                   
+                   else -> { 
+                      print("error")
+                   }
+
+                
+               }
+    
+            }
+              
+             
+      }
+          res.addElement("%.2f".format(stack.peek()))
+          
+    } 
+    
+    for (item in res){
+        print (item)
+    }
+    
+}
