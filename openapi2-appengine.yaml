@@ -1,0 +1,71 @@
+# openapi2-appengine.yaml
+swagger: '2.0'
+info:
+  title: sinch-api code chalanges
+  description: Sample API on API Gateway with an App Engine backend
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  
+  /sinch-assignment/all-pairs:
+    post:
+      summary: Exercise 1 all pair with a given sum.
+      operationId: ex1
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: false
+          schema:
+            type: string 
+      x-google-backend:
+              address: https://fresh-metrics-266911.uc.r.appspot.com
+              path_translation: [ APPEND_PATH_TO_ADDRESS ]
+              jwt_audience: 1046862225932-ad9bpbu06s1fech21kt3utmq061oi9vo.apps.googleusercontent.com
+      security:
+          - api_key: []                  
+      responses:
+        '201':
+          description: exercise solved
+          schema:
+            type: string
+
+  /sinch-assignment/polish-notation:
+    post:
+      summary: Exercise 2 prefix notation
+      operationId: ex2
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: false
+          schema:
+            type: string 
+      x-google-backend:
+              address: https://fresh-metrics-266911.uc.r.appspot.com
+              path_translation: [ APPEND_PATH_TO_ADDRESS ]
+              jwt_audience: 1046862225932-ad9bpbu06s1fech21kt3utmq061oi9vo.apps.googleusercontent.com
+      security:
+          - api_key: []                  
+      responses:
+        '201':
+          description: exercise solved
+          schema:
+            type: string          
+  
+        
+securityDefinitions:
+      # This section configures basic authentication with an API key.
+      api_key:
+        type: "apiKey"
+        name: "key"
+        in: "query"        
