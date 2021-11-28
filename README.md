@@ -1,7 +1,7 @@
 # Kotlin Spring Boot on App Engine Standard
 
 
-##Deploy locally 
+### Deploy locally 
 
 ```sh
 git clone https://github.com/mvladoi/sinch-task.git
@@ -13,9 +13,19 @@ mvn spring-boot:run
 [tutorial]: https://cloud.google.com/community/tutorials/kotlin-springboot-app-engine-java8
 
 
-## Two Apis 
-1. ```sinch-assignment/all-pairs```
-2. ```sinch-assignment/polish-notation```
+### 7. Api implemented : 
+
+- **a.**\
+Action	     HTTPS \
+Verb         POST\
+URL Path     sinch-assignment/all-pairs  
+> Description  Exercise 1 
+
+- **b.**\
+Action	     HTTPS \
+Verb         POST\
+URL Path     sinch-assignment/polish-notation
+> Description  Exercise 2
 
 
 ## Running Time
