@@ -38,7 +38,7 @@ URL Path     sinch-assignment/polish-notation
 
 ## To test it on GCP API GATEWAY 
 
-curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/polish-notation/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @/Users/mihai/Desktop/sinch/springboot/input_files/polish_notation/file1  -H "Content-Type: application/text"
+curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/polish-notation/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @sinch/springboot/input_files/polish_notation/file1  -H "Content-Type: application/text"
 
 Response: 
 
@@ -46,7 +46,7 @@ Response:
 
 
 
-curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/all-pairs/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @/Users/mihai/Desktop/sinch/springboot/input_files/all_pairs/file1  -H "Content-Type: application/text"
+curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/all-pairs/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @sinch/springboot/input_files/all_pairs/file1  -H "Content-Type: application/text"
 
 Response:
 
