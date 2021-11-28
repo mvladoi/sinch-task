@@ -1,4 +1,4 @@
-# Kotlin Spring Boot on GCP App Engine Standard
+# Kotlin Spring Boot on GCP API GATEWAY with App Engine Standard service backend 
 
 
 ### Deploy locally 
