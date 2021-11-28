@@ -1,11 +1,11 @@
-# Kotlin Spring Boot on App Engine Standard
+# Kotlin Spring Boot on GCP API GATEWAY with App Engine Standard service backend 
 
 
-##Deploy locally 
+### Deploy locally 
 
 ```sh
 git clone https://github.com/mvladoi/sinch-task.git
-cd sinch/springboot
+cd springboot
 mvn spring-boot:run 
 
 ```
@@ -13,9 +13,19 @@ mvn spring-boot:run
 [tutorial]: https://cloud.google.com/community/tutorials/kotlin-springboot-app-engine-java8
 
 
-## Two Apis 
-1. ```sinch-assignment/all-pairs```
-2. ```sinch-assignment/polish-notation```
+### 7. Api implemented : 
+
+- **a.**\
+Action	     HTTPS \
+Verb         POST\
+URL Path     sinch-assignment/all-pairs  
+> Description  Exercise 1 
+
+- **b.**\
+Action	     HTTPS \
+Verb         POST\
+URL Path     sinch-assignment/polish-notation
+> Description  Exercise 2
 
 
 ## Running Time
@@ -26,7 +36,18 @@ mvn spring-boot:run
     O(n) time
    
 
-## To test it on GCP APP Engine 
-curl -X POST https://fresh-metrics-266911.uc.r.appspot.com/sinch-assignment/all-pairs --data-binary  @sinch/springboot/input_files/all_pairs/file1  -H "Content-Type: application/javascript"
+## To test it on GCP API GATEWAY 
 
-curl -X POST https://fresh-metrics-266911.uc.r.appspot.com/sinch-assignment/polish-notation  --data-binary  @sinch/springboot/input_files/polish_notation/file1  -H "Content-Type: application/javascript"
+curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/polish-notation/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @sinch/springboot/input_files/polish_notation/file1  -H "Content-Type: application/text"
+
+Response: 
+
+```{result: 42.00, 1337.00, -12.50, 100500.00, error, error}```
+
+
+
+curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/all-pairs/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @sinch/springboot/input_files/all_pairs/file1  -H "Content-Type: application/text"
+
+Response:
+
+```{result: 2}```
