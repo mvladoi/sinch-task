@@ -55,4 +55,5 @@ Response:
 
 ## To DO
 1. Improve the testing with different test cases 
-2. Improve the api response code in case of failures 
+    (add suport for input files that contains empty lines)
+3. Improve the api response code in case of failures 
