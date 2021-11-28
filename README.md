@@ -1,4 +1,4 @@
-# Kotlin Spring Boot on App Engine Standard
+# Kotlin Spring Boot on GCP App Engine Standard
 
 
 ### Deploy locally 
