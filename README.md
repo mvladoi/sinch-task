@@ -36,7 +36,18 @@ URL Path     sinch-assignment/polish-notation
     O(n) time
    
 
-## To test it on GCP APP Engine 
-curl -X POST https://fresh-metrics-266911.uc.r.appspot.com/sinch-assignment/all-pairs --data-binary  @sinch/springboot/input_files/all_pairs/file1  -H "Content-Type: application/javascript"
+## To test it on GCP API GATEWAY 
 
-curl -X POST https://fresh-metrics-266911.uc.r.appspot.com/sinch-assignment/polish-notation  --data-binary  @sinch/springboot/input_files/polish_notation/file1  -H "Content-Type: application/javascript"
+curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/polish-notation/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @/Users/mihai/Desktop/sinch/springboot/input_files/polish_notation/file1  -H "Content-Type: application/text"
+
+Response: 
+
+```{result: 42.00, 1337.00, -12.50, 100500.00, error, error}```
+
+
+
+curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/all-pairs/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @/Users/mihai/Desktop/sinch/springboot/input_files/all_pairs/file1  -H "Content-Type: application/text"
+
+Response:
+
+```{result: 2}```
