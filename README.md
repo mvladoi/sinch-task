@@ -5,7 +5,7 @@
 
 ```sh
 git clone https://github.com/mvladoi/sinch-task.git
-cd sinch/springboot
+cd springboot
 mvn spring-boot:run 
 
 ```
