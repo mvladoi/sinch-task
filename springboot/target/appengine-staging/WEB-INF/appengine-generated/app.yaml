@@ -1,0 +1,15 @@
+runtime: java8
+inbound_services:
+- warmup
+derived_file_type:
+- java_precompiled
+threadsafe: True
+auto_id_policy: default
+beta_settings:
+  'source_reference': 'https://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@github.com/mvladoi/sinch-task.git#abb1a0c51a7d1bbb06f5f2631fd97cb18479aae5'
+api_version: 'user_defined'
+handlers:
+- url: /.*
+  script: unused
+  login: optional
+  secure: optional
