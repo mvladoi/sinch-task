@@ -13,7 +13,7 @@ mvn spring-boot:run
 [tutorial]: https://cloud.google.com/community/tutorials/kotlin-springboot-app-engine-java8
 
 
-### 7. Api implemented : 
+### Apis implemented : 
 
 - **a.**\
 Action	     HTTPS \
