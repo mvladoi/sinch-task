@@ -51,3 +51,8 @@ curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/all-
 Response:
 
 ```{result: 2}```
+
+
+## To DO
+1. Improve the testing with different test cases 
+2. Improve the api response code in case of failures 
