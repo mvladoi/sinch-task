@@ -18,13 +18,13 @@ mvn spring-boot:run
 - **a.**\
 Action	     HTTPS \
 Verb         POST\
-URL Post     sinch-assignment/all-pairs  
+URL      sinch-assignment/all-pairs  
 > Description  Exercise 1 
 
 - **b.**\
 Action	     HTTPS \
 Verb         POST\
-URL Post     sinch-assignment/polish-notation
+URL      sinch-assignment/polish-notation
 > Description  Exercise 2
 
 
@@ -53,7 +53,7 @@ Response:
 ```{result: 2}```
 
 
-## To DO
+## To Do
 1. Improve the testing with different test cases 
     (add suport for input files that contains empty lines)
 3. Improve the api response code in case of failures 
