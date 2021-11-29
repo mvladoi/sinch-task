@@ -18,13 +18,13 @@ mvn spring-boot:run
 - **a.**\
 Action	     HTTPS \
 Verb         POST\
-URL Path     sinch-assignment/all-pairs  
+URL Post     sinch-assignment/all-pairs  
 > Description  Exercise 1 
 
 - **b.**\
 Action	     HTTPS \
 Verb         POST\
-URL Path     sinch-assignment/polish-notation
+URL Post     sinch-assignment/polish-notation
 > Description  Exercise 2
 
 
@@ -36,7 +36,7 @@ URL Path     sinch-assignment/polish-notation
     O(n) time
    
 
-## To test it on GCP API GATEWAY 
+## Test it on GCP API GATEWAY 
 
 curl -X POST https://sinch-gateway-dcx6qn7w.nw.gateway.dev/sinch-assignment/polish-notation/?key=AIzaSyBigpr5hghSfwqwCKoeLzcRpImjrq3qUIU  --data-binary  @sinch/springboot/input_files/polish_notation/file1  -H "Content-Type: application/text"
 
